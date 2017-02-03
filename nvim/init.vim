@@ -1,13 +1,16 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Misc
 Plug 'airblade/vim-gitgutter'
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree'
 
+" UI
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-
-Plug 'plasticboy/vim-markdown'
 Plug 'kien/rainbow_parentheses.vim'
 
+" Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang'
 
@@ -71,4 +74,5 @@ au Syntax * RainbowParenthesesLoadBraces
 
 set backup
 
-
+" Shortcut for NERDTree
+map <C-n> :NERDTreeToggle<CR>
