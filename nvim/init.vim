@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
 
 " UI
 Plug 'morhetz/gruvbox'
@@ -23,9 +24,6 @@ let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-3.8/lib/clang'
 set completeopt-=preview
 
-let g:doxygen_enhanced_color=1
-let g:load_doxygen_syntax=1
-
 set expandtab
 set shiftwidth=4
 set lcs=trail:·,tab:»·
@@ -35,9 +33,6 @@ set relativenumber
 set number
 
 let g:gitgutter_sign_column_always = 1
-
-let g:ycm_confirm_extra_conf = 0
-
 
 let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
@@ -56,9 +51,6 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 
 
-let g:vim_indent_guides_start_level = 2
-
-
 set laststatus=2
 
 autocmd BufReadPost *
@@ -70,9 +62,14 @@ au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-" au Syntax * RainbowParenthesesLoadChevrons
+au Syntax * RainbowParenthesesLoadChevrons
 
 set backup
 
 " Shortcut for NERDTree
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
+
+" Key maping
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
