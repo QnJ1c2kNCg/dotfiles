@@ -1,6 +1,24 @@
-SRC="./nvim"
-DEST="~/.config/"
+NEOVIM_SRC="./nvim"
+NEOVIM_DEST="/home/brusi/.config/"
 
-echo "Copying $SRC to $DEST"
-cp -r nvim ~/.config
+VIM_SRC="./nvim/init.vim"
+VIM_DEST="/home/brusi/.vimrc"
+
+key="$1"
+
+case $key in
+    vim|normal)
+    echo "Copying $VIM_SRC to $VIM_DEST"
+    cp -f "$VIM_SRC" "$VIM_DEST"
+    ;;
+    nvim|neovim)
+    echo "Copying $NEOVIM_SRC to $NEOVIM_DEST"
+    cp -r $NEOVIM_SRC $NEOVIM_DEST
+    ;;
+    *)
+    echo "Invalid argument: $key"
+    ;;
+
+esac
+
 echo "Done"
