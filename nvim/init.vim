@@ -43,6 +43,14 @@ set cursorline
 set relativenumber
 set number
 
+set noswapfile
+set nobackup
+set nowritebackup
+if !&diff
+    set undodir=~/.nvim/undodir
+    set undofile
+endif
+
 " UI config
 let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
@@ -69,8 +77,6 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
-
-set backup
 
 " Key mapping
 let mapleader = "\<Space>"
