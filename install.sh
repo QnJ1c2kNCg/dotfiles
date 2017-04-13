@@ -12,6 +12,8 @@ case $key in
     cp -f "$VIM_SRC" "$VIM_DEST"
     ;;
     nvim|neovim)
+    echo "Removing old $NEOVIM_DEST"
+    rm -rf $NEOVIM_DEST
     echo "Copying $NEOVIM_SRC to $NEOVIM_DEST"
     cp -r $NEOVIM_SRC $NEOVIM_DEST
     ;;
