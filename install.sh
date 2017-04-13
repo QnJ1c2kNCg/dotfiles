@@ -1,5 +1,5 @@
 NEOVIM_SRC="./nvim"
-NEOVIM_DEST="/home/brusi/.config/"
+NEOVIM_DEST="/home/brusi/.config/nvim"
 
 VIM_SRC="./nvim/init.vim"
 VIM_DEST="/home/brusi/.vimrc"
