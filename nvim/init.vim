@@ -6,6 +6,7 @@ Plug 'plasticboy/vim-markdown'  " Markdown
 Plug 'scrooloose/nerdtree'      " Tree explorer
 Plug 'tpope/vim-commentary'     " Comment stuff
 Plug 'ctrlpvim/ctrlp.vim'       " File fuzzy finder
+Plug 'rhysd/vim-clang-format'   " Clang format plugin
 
 " UI
 Plug 'morhetz/gruvbox'
@@ -42,6 +43,7 @@ set list
 set cursorline
 set relativenumber
 set number
+set mouse=a
 
 set noswapfile
 set nobackup
@@ -82,3 +84,5 @@ au Syntax * RainbowParenthesesLoadChevrons
 let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+
+nnoremap <Leader>f :ClangFormat<CR>
