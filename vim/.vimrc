@@ -1,6 +1,8 @@
 " Normal Vim config
 set expandtab
+set tabstop=2
 set shiftwidth=2
+set autoindent
 set lcs=trail:~
 set list
 set number
