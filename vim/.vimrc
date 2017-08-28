@@ -12,7 +12,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 if !&diff
-    set undodir=~/.nvim/undodir
+    set undodir=~/.vim/undodir
     set undofile
 endif
 
