@@ -1,8 +1,7 @@
-" source /apollo/env/envImprovement/var/vimrc
-
 call plug#begin('~/.vim/bundle/')
-Plug 'yuttie/inkstained-vim'
 Plug 'morhetz/gruvbox'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Normal Vim config
