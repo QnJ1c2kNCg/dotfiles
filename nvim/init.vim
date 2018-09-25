@@ -28,7 +28,10 @@ colorscheme gruvbox
 
 " Key mapping
 let mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>w :wa<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e<CR>
 inoremap jj <ESC>
+
+" Use tabs instead of spaces
+set autoindent noexpandtab tabstop=4 shiftwidth=4
