@@ -31,3 +31,4 @@ let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e<CR>
+inoremap jj <ESC>
