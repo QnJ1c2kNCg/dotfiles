@@ -32,3 +32,20 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e<CR>
 inoremap jj <ESC>
+
+:command WQ wq
+:command Wq wq
+:command Wa wa
+:command wA wa
+:command WA wa
+:command W w
+:command Q q
+
+
+
+" Remove trailing whitespace
+nnoremap <leader>t :%s/\s\+$//e<CR>
+
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
