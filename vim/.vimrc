@@ -33,13 +33,12 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e<CR>
 inoremap jj <ESC>
 
-:command WQ wq
-:command Wq wq
-:command Wa wa
-:command wA wa
-:command WA wa
-:command W w
-:command Q q
+command WQ wq
+command Wq wq
+command Wa wa
+command WA wa
+command W w
+command Q q
 
 
 
