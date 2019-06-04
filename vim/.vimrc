@@ -40,11 +40,15 @@ command WA wa
 command W w
 command Q q
 
-
-
 " Remove trailing whitespace
 nnoremap <leader>t :%s/\s\+$//e<CR>
 
-
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Highlight current cursor line
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
