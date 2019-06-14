@@ -13,6 +13,8 @@ set lcs=trail:~
 set list
 set number
 set hlsearch
+set ignorecase            " Do case insensitive matching
+set incsearch             " Incremental search
 syntax on
 
 set background=dark
