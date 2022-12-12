@@ -1,0 +1,33 @@
+# remap prefix from 'C-b' to '`'
+unbind C-b
+set-option -g prefix `
+bind-key ` send-prefix
+
+# Use current path when creating new windows
+bind c new-window -c "#{pane_current_path}"
+bind \\ split-window -h -c "#{pane_current_path}"
+bind - split-window -c "#{pane_current_path}"
+
+
+# Enable mouse mode (tmux 2.1 and above)
+set -g mouse on
+
+
+# don't rename windows automatically
+set-option -g allow-rename off
+
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
+
+
+# Fix ESC delay when using Neovim in tmux
+set -sg escape-time 0
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+set -g history-limit 100000
