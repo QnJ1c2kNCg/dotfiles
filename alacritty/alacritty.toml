@@ -1,0 +1,7 @@
+[colors.primary]
+background = "0x000000"
+
+[font]
+size = 16
+#normal = {family="Noto Sans Mono", style="Regular"}
+normal = {family="CommitMono Nerd Font Mono", style="Regular"}
